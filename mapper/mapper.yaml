@@ -1,0 +1,11 @@
+mapper:
+  optimization-metric: [ delay, energy ]
+  live-status: False
+  log-stats: False
+  num-threads: 6
+  timeout: 150 # Base is 15000
+  victory-condition: 100 # Base is 800
+  algorithm: hybrid
+  max-permutations-per-if-visit: 32
+
+

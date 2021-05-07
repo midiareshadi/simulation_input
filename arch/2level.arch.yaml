@@ -1,0 +1,54 @@
+architecture:
+  version: 0.2
+
+  subtree:
+  - name: System
+    
+    local:
+    - name: MainMemory
+      class: DRAM
+      attributes:
+        width: 256
+        block-size: 32
+        word-bits: 8
+
+    subtree:
+    - name: Cluster
+      attributes:
+        technology: 40nm
+
+      local:
+      - name: Bigbuffer
+        class: SRAM
+        attributes:
+          depth: 64
+          width: 8
+          block-size: 1
+          word-bits: 8          
+          
+      - name: Littlebuffer
+        class: SRAM
+        attributes:
+          depth: 16
+          width: 8
+          block-size: 1
+          word-bits: 8          
+        
+      subtree:
+      - name: PE[0..2]
+      
+        local:
+        - name: RegisterFile 
+          class: regfile
+          attributes:
+            depth: 8
+            width: 8
+            block-size: 1
+            word-bits: 8
+            meshX: 3
+            
+        - name: MACC
+          class: intmac
+          attributes:
+            datawidth: 8
+            meshX: 3

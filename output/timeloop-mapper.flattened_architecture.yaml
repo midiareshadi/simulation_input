@@ -1,0 +1,72 @@
+architecture:
+  version: 0.3
+  local:
+  - name: System.Cluster[0..15].PE[0..11].RegisterFile
+    class: regfile
+    attributes:
+      block-size: 1
+      depth: 8
+      latency: 5ns
+      meshX: 4
+      n_ports: 2
+      technology: 40nm
+      width: 8
+      word-bits: 8
+  - name: System.Cluster[0..15].PE[0..11].MACC
+    class: intmac
+    attributes:
+      datawidth: 8
+      latency: 5ns
+      meshX: 4
+      num_pipeline_stages: 2
+      technology: 40nm
+  - name: System.Cluster[0..15].Main_buffer[0..0]
+    class: SRAM
+    attributes:
+      block-size: 1
+      depth: 16
+      latency: 5ns
+      meshX: 1
+      n_banks: 1
+      n_rd_ports: 0
+      n_rdwr_ports: 1
+      n_wr_ports: 0
+      technology: 40nm
+      width: 8
+      word-bits: 8
+  - name: System.Cluster[0..15].Main_buffer[0..3]
+    class: SRAM
+    attributes:
+      block-size: 1
+      depth: 16
+      latency: 5ns
+      meshX: 4
+      n_banks: 1
+      n_rd_ports: 0
+      n_rdwr_ports: 1
+      n_wr_ports: 0
+      technology: 40nm
+      width: 8
+      word-bits: 8
+  - name: System.Cluster[0..15].dummy_buffer[0..3]
+    class: SRAM
+    attributes:
+      block-size: 1
+      depth: 1
+      latency: 5ns
+      meshX: 4
+      n_banks: 1
+      n_rd_ports: 0
+      n_rdwr_ports: 1
+      n_wr_ports: 0
+      technology: 40nm
+      width: 16
+      word-bits: 8
+  - name: System.MainMemory
+    class: DRAM
+    attributes:
+      block-size: 32
+      technology: 65nm
+      type: LPDDR4
+      width: 256
+      word-bits: 8

@@ -21,7 +21,7 @@ architecture:
       - name: Bigbuffer
         class: SRAM
         attributes:
-          depth: 64
+          depth: 8192
           width: 8
           block-size: 1
           word-bits: 8          
@@ -29,7 +29,7 @@ architecture:
       - name: Littlebuffer
         class: SRAM
         attributes:
-          depth: 16
+          depth: 1024
           width: 8
           block-size: 1
           word-bits: 8          

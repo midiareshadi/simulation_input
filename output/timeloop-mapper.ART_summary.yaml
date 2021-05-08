@@ -1,0 +1,18 @@
+ART_summary:
+  version: 0.3
+  table_summary:
+  - name: System.Cluster[0..0].PE[0..2].RegisterFile
+    area: 100.34
+    primitive_estimations: Aladdin_table
+  - name: System.Cluster[0..0].PE[0..2].MACC
+    area: 332.25
+    primitive_estimations: Aladdin_table
+  - name: System.Cluster[0..0].Bigbuffer[0..0]
+    area: 20770.8
+    primitive_estimations: Cacti
+  - name: System.Cluster[0..0].Littlebuffer[0..0]
+    area: 2653.64
+    primitive_estimations: Cacti
+  - name: System.MainMemory
+    area: 0
+    primitive_estimations: Cacti

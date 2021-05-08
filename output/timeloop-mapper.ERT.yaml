@@ -1,0 +1,163 @@
+ERT:
+  version: 0.3
+  tables:
+  - name: System.Cluster[0..0].PE[0..2].RegisterFile
+    actions:
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.003
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0.072
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0.025
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 0.094
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.003
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0.072
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0.025
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 0.094
+    - name: idle
+      arguments: null
+      energy: 0.003
+  - name: System.Cluster[0..0].PE[0..2].MACC
+    actions:
+    - name: mac_random
+      arguments: null
+      energy: 0.561
+    - name: mac_reused
+      arguments: null
+      energy: 0.48
+    - name: mac_gated
+      arguments: null
+      energy: 0.036
+    - name: idle
+      arguments: null
+      energy: 0.018
+  - name: System.Cluster[0..0].Bigbuffer[0..0]
+    actions:
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.0
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 2.621
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 1.124
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 3.744
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.0
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 1.371
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0.588
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 1.958
+    - name: idle
+      arguments: null
+      energy: 0.0
+  - name: System.Cluster[0..0].Littlebuffer[0..0]
+    actions:
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.0
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0.601
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0.258
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 0.859
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.0
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0.556
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0.238
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 0.794
+    - name: idle
+      arguments: null
+      energy: 0.0
+  - name: System.MainMemory
+    actions:
+    - name: read
+      arguments: null
+      energy: 2048
+    - name: write
+      arguments: null
+      energy: 2048
+    - name: idle
+      arguments: null
+      energy: 0

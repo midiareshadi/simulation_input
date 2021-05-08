@@ -1,0 +1,13 @@
+ART:
+  version: 0.3
+  tables:
+  - name: System.Cluster[0..0].PE[0..2].RegisterFile
+    area: 100.34
+  - name: System.Cluster[0..0].PE[0..2].MACC
+    area: 332.25
+  - name: System.Cluster[0..0].Bigbuffer[0..0]
+    area: 20770.8
+  - name: System.Cluster[0..0].Littlebuffer[0..0]
+    area: 2653.64
+  - name: System.MainMemory
+    area: 0

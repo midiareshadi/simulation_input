@@ -1,0 +1,72 @@
+ERT_summary:
+  version: 0.3
+  table_summary:
+  - name: System.Cluster[0..0].PE[0..2].RegisterFile
+    actions:
+    - name: read
+      average_energy: 0.049
+      max_energy: 0.094
+      min_energy: 0.003
+    - name: write
+      average_energy: 0.049
+      max_energy: 0.094
+      min_energy: 0.003
+    - name: idle
+      energy: 0.003
+    primitive_estimation(s):
+    - name: System.Cluster[0..0].PE[0..2].RegisterFile
+      estimator: Aladdin_table
+  - name: System.Cluster[0..0].PE[0..2].MACC
+    actions:
+    - name: mac_random
+      energy: 0.561
+    - name: mac_reused
+      energy: 0.48
+    - name: mac_gated
+      energy: 0.036
+    - name: idle
+      energy: 0.018
+    primitive_estimation(s):
+    - name: System.Cluster[0..0].PE[0..2].MACC
+      estimator: Aladdin_table
+  - name: System.Cluster[0..0].Bigbuffer[0..0]
+    actions:
+    - name: read
+      average_energy: 1.872
+      max_energy: 3.744
+      min_energy: 0.0
+    - name: write
+      average_energy: 0.979
+      max_energy: 1.958
+      min_energy: 0.0
+    - name: idle
+      energy: 0.0
+    primitive_estimation(s):
+    - name: System.Cluster[0..0].Bigbuffer[0..0]
+      estimator: Cacti
+  - name: System.Cluster[0..0].Littlebuffer[0..0]
+    actions:
+    - name: read
+      average_energy: 0.429
+      max_energy: 0.859
+      min_energy: 0.0
+    - name: write
+      average_energy: 0.397
+      max_energy: 0.794
+      min_energy: 0.0
+    - name: idle
+      energy: 0.0
+    primitive_estimation(s):
+    - name: System.Cluster[0..0].Littlebuffer[0..0]
+      estimator: Cacti
+  - name: System.MainMemory
+    actions:
+    - name: read
+      energy: 2048
+    - name: write
+      energy: 2048
+    - name: idle
+      energy: 0
+    primitive_estimation(s):
+    - name: System.MainMemory
+      estimator: Cacti
